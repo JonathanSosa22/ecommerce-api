@@ -37,7 +37,7 @@ test("GET /products should return all products", async () => {
 });
 
 test("POST /products/:id/images should set the product images", async () => {
-  const image = await ProductImg.create({ url: "UrlImage", filename: "Image" });
+  const image = await ProductImg.create({ url: "UrlImage", publicId: "Image" });
   const res = await request(app)
     .post(`/api/v1/products/${productId}/images`)
     .send([image.id])

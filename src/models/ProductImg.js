@@ -5,10 +5,10 @@ const ProductImg = sequelize.define(
   "productImg",
   {
     url: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    filename: {
+    publicId: {
       type: DataTypes.STRING,
       allowNull: false,
     },
